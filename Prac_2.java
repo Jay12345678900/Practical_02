@@ -1,0 +1,77 @@
+import java.util.Date;
+
+public class Prac_2 {
+    private int id=0 ;
+    private double balance=500;
+    private double annual=07;
+    private Date date = new Date();
+
+    Prac_2(){}
+    Prac_2(int id ,double balance)
+    {
+        this.id=id;
+        this.balance=balance;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public double getBalance()
+    {
+        return balance;
+    }
+
+    public double getAnnual()
+    {
+        return annual;
+    }
+
+    public Date getDate()
+    {
+        return date;
+    }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
+    public void setBalance(double balance)
+    {
+        this.balance = balance;
+    }
+
+    public void setAnnual(double annual)
+    {
+        this.annual = annual;
+    }
+
+    public void setDate(Date date)
+    {
+        this.date = date;
+    }
+
+    public double getMonthlyrate()
+    {
+        return  annual/12;
+    }
+
+    public double getMonthlyinterest()
+    {
+        return balance*(annual/1200);
+    }
+
+    public void withdraw(double a)
+    {
+        balance=balance-a;
+        System.out.println(a + " Rs. Withdrawn successfully.");
+    }
+
+    public void deposit(double a)
+    {
+        balance=balance+a;
+        System.out.println(a + " Rs. Deposited successfully.");
+    }
+}
